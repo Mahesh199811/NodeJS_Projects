@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    title Register
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    div.container
+      h1 Register
+      form(action='/users/register', method='POST')
+        div.form-group
+          label(for='username') Username
+          input#username.form-control(type='text', name='username', required)
+        div.form-group
+          label(for='email') Email
+          input#email.form-control(type='email', name='email', required)
+        div.form-group
+          label(for='password') Password
+          input#password.form-control(type='password', name='password', required)
+        div.form-group
+          button.btn.btn-primary(type='submit') Register
+      p
+        a(href='/login') Already have an account? Login here.
